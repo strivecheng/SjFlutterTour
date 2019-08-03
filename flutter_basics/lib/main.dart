@@ -37,8 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
     ExampleItemInfo exampleItemInfo = new ExampleItemInfo("相对父布局居左和居右");
     exampleItemInfoList.add(exampleItemInfo);
 
-    exampleItemInfo = new ExampleItemInfo("相对父布局居左和居右1");
-    exampleItemInfoList.add(exampleItemInfo);
+//    exampleItemInfo = new ExampleItemInfo("相对父布局居左和居右1");
+//    exampleItemInfoList.add(exampleItemInfo);
   }
 
   @override
