@@ -5,6 +5,7 @@
 /// Description:
 import 'package:flutter/material.dart';
 
+///通过两种方式写出相对父布局居左和居右的效果
 class LayoutDemoOne extends StatefulWidget {
   @override
   _LayoutDemoOneState createState() => _LayoutDemoOneState();

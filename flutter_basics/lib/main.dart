@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/layout/Demo1.dart';
+import 'package:flutter_basics/layout/Demo2.dart';
 
 import 'common/bean/example_item_info.dart';
 
@@ -37,8 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
     ExampleItemInfo exampleItemInfo = new ExampleItemInfo("相对父布局居左和居右");
     exampleItemInfoList.add(exampleItemInfo);
 
-//    exampleItemInfo = new ExampleItemInfo("相对父布局居左和居右1");
-//    exampleItemInfoList.add(exampleItemInfo);
+    exampleItemInfo = new ExampleItemInfo("MainAxisAlignment属性详解");
+    exampleItemInfoList.add(exampleItemInfo);
   }
 
   @override
@@ -61,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.white,
               child: Text(
                 "解决问题Demo合集",
-                style: TextStyle(fontSize: 20.0, color: Colors.blueAccent),
+                style: TextStyle(fontSize: 22.0, color: Colors.blueAccent),
               ),
             ),
             ListView.separated(
@@ -82,10 +83,21 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: TextStyle(fontSize: 18),
                     ),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return LayoutDemoOne();
-                      }));
+                      switch (index) {
+                        case 0:
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return LayoutDemoOne();
+                          }));
+                          break;
+                        case 1:
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                                return LayoutDemoTwo(exampleItemInfoList[index].title);
+                              }));
+                          break;
+                        default:
+                      }
                     },
                   ),
                 );
