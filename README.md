@@ -31,3 +31,8 @@
 我就是想通过自己的这种学习方式，帮助跟我有同样思路的小伙伴，更好的理解Flutter。当然毕竟我也是Flutter初学者，肯定有很多不足的地方，或者不是最好的方法，希望大家能提出建议，一起相互交流学习，共同进步。
 
 好啦，废话就先说这么多，下一篇就将记录从Android的角度去学习Flutter。最后祝大家，🐔你太美！！！
+
+### 文章传送门
+[Flutter学习之”相对布局“](https://juejin.im/post/5d45b3b1f265da03a652fb75)
+
+[Flutter学习之MainAxisAlignment属性详解](https://juejin.im/post/5d46dbb36fb9a06b0517d252)
