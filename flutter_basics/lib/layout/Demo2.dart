@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 ///spaceBetween: 把空闲空间均匀地分配给孩子们
 ///spaceAround: 在两个孩子之间平均分配空闲的空间以及第一个和最后一个孩子前后的一半空间
 ///spaceEvenly: 在孩子之间，以及在第一个和最后一个孩子之前和之后，均匀地放置空闲空间
+
 class LayoutDemoTwo extends StatefulWidget {
   String title;
 

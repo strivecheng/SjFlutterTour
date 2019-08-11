@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/layout/Demo1.dart';
 import 'package:flutter_basics/layout/Demo2.dart';
+import 'package:flutter_basics/layout/Demo3.dart';
 
 import 'common/bean/example_item_info.dart';
 
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       home: MyHomePage(title: 'Flutter实例合集'),
+      routes: {
+        SecondRoute.routeName: (context) => SecondRoute(),
+      },
     );
   }
 }
@@ -40,6 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
     exampleItemInfo = new ExampleItemInfo("MainAxisAlignment属性详解");
     exampleItemInfoList.add(exampleItemInfo);
+
+    exampleItemInfo = new ExampleItemInfo("Router跳转以及数据传递");
+    exampleItemInfoList.add(exampleItemInfo);
   }
 
   @override
@@ -61,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: double.infinity,
               color: Colors.white,
               child: Text(
-                "解决问题Demo合集",
+                "Demo合集",
                 style: TextStyle(fontSize: 22.0, color: Colors.blueAccent),
               ),
             ),
@@ -93,8 +100,15 @@ class _MyHomePageState extends State<MyHomePage> {
                         case 1:
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                                return LayoutDemoTwo(exampleItemInfoList[index].title);
-                              }));
+                            return LayoutDemoTwo(
+                                exampleItemInfoList[index].title);
+                          }));
+                          break;
+                        case 2:
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return RoutePushDemo();
+                          }));
                           break;
                         default:
                       }
